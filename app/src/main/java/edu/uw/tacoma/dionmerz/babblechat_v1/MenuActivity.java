@@ -15,7 +15,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         Button startButton = (Button) findViewById(R.id.button_start);
 
+        Button codeButton = (Button) findViewById(R.id.button_codeBuilder);
+
         startButton.setOnClickListener(this);
+        codeButton.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -32,6 +37,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.button_codeBuilder:
+                intent = new Intent(this, CodeActivity.class);
+                startActivity(intent);
                 break;
         }
     }
